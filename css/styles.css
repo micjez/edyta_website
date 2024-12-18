@@ -2943,7 +2943,6 @@ td:last-child {
 	display      : inline-block;
 	min-height   : var(--vspace-2);
 	margin-bottom: var(--vspace-0_625);
-	padding-left : calc(2.25 * var(--space));
 	position     : relative;
 }
 
