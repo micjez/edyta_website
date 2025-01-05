@@ -104,27 +104,26 @@
    * color-2(#343D35)
    * color-3(#FEF5E4)
    */
-	--color-1: hsla(35, 87%, 49%, 1);
-	--color-2: hsla(127, 8%, 22%, 1);
-	--color-3: hsla(39, 93%, 95%, 1);
-
+	--color-1: hsla(315, 26%, 73%, 1);
+	--color-2: hsla(315, 21%, 57%, 1);
+	--color-3: hsla(60, 100%, 97%, 1);
   /* theme color variations
    */
-	--color-1-lightest             : hsla(35, 87%, 96%, 1);
-	--color-1-lighter              : hsla(35, 87%, 69%, 1);
-	--color-1-light                : hsla(35, 87%, 59%, 1);
-	--color-1-dark                 : hsla(35, 87%, 39%, 1);
-	--color-1-darker               : hsla(35, 87%, 29%, 1);
-	--color-1-darkest              : hsla(35, 87%, 10%, 1);
+   --color-1-lightest: hsla(315, 26%, 96%, 1);
+   --color-1-lighter: hsla(315, 26%, 83%, 1);
+   --color-1-light: hsla(315, 26%, 78%, 1);
+   --color-1-dark: hsla(315, 26%, 58%, 1);
+   --color-1-darker: hsla(315, 26%, 48%, 1);
+   --color-1-darkest: hsla(315, 26%, 28%, 1);
 
-	--color-2-lightest             : hsla(127, 8%, 55%, 1);
-	--color-2-lighter              : hsla(127, 8%, 42%, 1);
-	--color-2-light                : hsla(127, 8%, 32%, 1);
-	--color-2-dark                 : hsla(127, 8%, 14%, 1);
-	--color-2-darker               : hsla(127, 8%, 2%, 1);
+	--color-2-lightest: hsla(315, 21%, 87%, 1);
+	--color-2-lighter: hsla(315, 21%, 72%, 1);
+	--color-2-light: hsla(315, 21%, 65%, 1);
+	--color-2-dark: hsla(315, 21%, 47%, 1);
+	--color-2-darker: hsla(315, 21%, 35%, 1);
 	
 	--color-3-light                : hsla(39, 93%, 100%, 1);
-	--color-3-dark                 : hsla(39, 93%, 85%, 1);
+	--color-3-dark                 : rgb(74, 67, 54);
 	--color-3-darker               : hsla(39, 93%, 75%, 1);
 
   /* feedback colors
@@ -2751,7 +2750,7 @@ td:last-child {
 	--width-grid-max: var(--width-sixteen-cols);
 }
 
-.width-narrower {
+.grid-list-items {
 	--width-grid-max: var(--width-narrower);
 }
 
@@ -3287,6 +3286,13 @@ td:last-child {
 	margin: 0;
 }
 
+.s-header__contact-btn {
+	--color-btn-stroke: var(--color-3);
+	--color-btn-stroke-text: var(--color-3);
+	--color-btn-stroke-hover: var(--color-3);
+	--color-btn-stroke-hover-text: var(--color-2-dark);
+}
+
 /* --------------------------------------------------------------------
  * ## mobile menu toggle
  * -------------------------------------------------------------------- */
@@ -3579,7 +3585,8 @@ td:last-child {
 	--content-min-height    : calc(var(--vspace-1) * 27);
 	z-index                 : 2;
 	background-color        : var(--color-2-dark);
-	background              : linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%);
+	background              : #a97a9d; /*linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%);*/
+	background              : linear-gradient(20deg, hsl(315deg, 21%, 57%) 40%, hsl(315deg, 21%, 47%) 100%);
 	width                   : 100%;
 	height                  : max(var(--content-min-height), 100vh);
 	overflow                : hidden;
@@ -4267,6 +4274,15 @@ td:last-child {
 	margin-top: 0;
 }
 
+.s-footer h6 {
+	color     : var(--color-3);
+	margin-top: 0;
+}
+
+.s-footer .contact-block a {
+	color: rgba(255, 255, 255, 0.6);
+  }
+
 .s-footer__block {
 	margin-bottom: var(--vspace-0_5);
 }
@@ -4738,4 +4754,29 @@ td:last-child {
 
 .contact-list li {
 	padding-left: 0;
+}
+
+.price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.price-service {
+	margin: 0;
+}
+
+.price-value {
+    font-size: var(--text-md);
+    font-weight: 400;
+    color: var(--color-text);
+    text-align: right;
 }
