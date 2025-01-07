@@ -3079,6 +3079,11 @@ td:last-child {
 	grid-row   : 1/2;
 	align-self : start;
 }
+.grid-section-split__header-about {
+	grid-column: 1/span 7;
+	grid-row   : 2/2;
+	align-self : start;
+}
 
 .grid-section-split__header>* {
 	width: min(55rem, 95%);
@@ -3657,7 +3662,32 @@ td:last-child {
 
 .s-intro__content-media img {
 	z-index       : 2;
-	width         : max(440px, 10vw);
+	width         : max(640px, 10vw);
+	margin        : 0;
+	-o-object-fit : cover;
+	object-fit    : cover;
+	aspect-ratio  : 2/2.5;
+	vertical-align: bottom;
+	box-shadow    : 0 60px 40px -40px rgba(0, 0, 0, 0.2);
+	position      : relative;
+	aspect-ratio: 1;
+  	border-radius: 300px;
+}
+
+.s-about__content-media {
+	grid-column : 12/-1;
+	grid-row    : span 2;
+	justify-self: end;
+	align-self  : center;
+}
+
+.s-about__content-media-inner {
+	position: relative;
+}
+
+.s-about__content-media img {
+	z-index       : 2;
+	width         : max(540px, 10vw);
 	margin        : 0;
 	-o-object-fit : cover;
 	object-fit    : cover;
