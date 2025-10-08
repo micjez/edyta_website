@@ -1,1 +1,1 @@
-# edyta_website
+# edyta website
